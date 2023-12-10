@@ -23,6 +23,6 @@ jobs:
 
     - name: Run Python script
       run:
-        /home/runner/code/result.py  # 実行したいPythonスクリプトのパスを指定
+        /script.py  # 実行したいPythonスクリプトのパスを指定
       env:
         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: ${{ secrets.OPENAI_API_KEY }}  # シークレットからOpenAIのAPIキーを取得
