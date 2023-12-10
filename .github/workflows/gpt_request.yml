@@ -1,5 +1,3 @@
-ls -l /home/runner/work/_temp/55081a65-60b1-4480-964d-45f63efd70ba.sh
-
 name: Run GPT Request
 
 on:
