@@ -22,7 +22,7 @@ jobs:
       run: pip install requests  # requestsライブラリをインストール
 
     - name: Run Python script
-      run: |
+      run:
         result.py  # 実行したいPythonスクリプトのパスを指定
       env:
         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: ${{ secrets.OPENAI_API_KEY }}  # シークレットからOpenAIのAPIキーを取得
