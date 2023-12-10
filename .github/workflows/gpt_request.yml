@@ -26,3 +26,9 @@ jobs:
         python path/to/your/result.py  # 実行したいPythonスクリプトのパスを指定
       env:
         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: ${{ secrets.OPENAI_API_KEY }}  # シークレットからOpenAIのAPIキーを取得
+
+
+- name: Set up Python
+  uses: actions/setup-python@v2
+  with:
+    python-version: '3.12'  # 使用するPythonのバージョンを指定
