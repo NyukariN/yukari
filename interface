@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ビジネス日本語メール添削アプリ</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>ビジネス日本語メール作成</h1>
+    <form id="emailForm">
+      <label for="emailTheme">メールのテーマ:</label>
+      <input type="text" id="emailTheme" name="emailTheme" required><br><br>
+      <label for="emailContent">メール内容:</label><br>
+      <textarea id="emailContent" name="emailContent" rows="10" cols="50" required></textarea><br><br>
+      <button type="submit">メールを送信</button>
+    </form>
+    <div id="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
