@@ -1,0 +1,20 @@
+from flask import Flask, request, jsonify
+
+app = Flask(__name__)
+
+@app.route('/api/email_correction', methods=['POST'])
+def email_correction():
+    # フロントエンドから受け取ったメールの内容
+    email_theme = request.json.get('emailTheme')
+    email_content = request.json.get('emailContent')
+
+    # ChatGPTにメールを送信し、添削を取得する処理（OpenAI APIを使用する場合など）
+
+    # 仮の添削結果（実際にはChatGPTのレスポンスをここで取得する）
+    corrected_email = "これは添削されたメールの内容です。"
+
+    # 添削結果をJSON形式で返す
+    return jsonify({'correctedEmail': corrected_email})
+
+if __name__ == '__main__':
+    app.run(debug=True)
