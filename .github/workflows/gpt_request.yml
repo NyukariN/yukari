@@ -26,6 +26,3 @@ jobs:
         ./script.py  # 実行したいPythonスクリプトのパスを指定
       env:
         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: ${{ secrets.OPENAI_API_KEY }}  # シークレットからOpenAIのAPIキーを取得
-
-git add script.sh  # 変更内容をステージングエリアに追加
-git commit -m 'Make script.sh executable for Linux'  # コミットメッセージを付けてコミット
