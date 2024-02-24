@@ -1,23 +1,35 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>ビジネス日本語メール添削アプリ</title>
-  <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日本語学習アプリ - テーマ選択</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <h1>ビジネス日本語メール作成</h1>
-    <form id="emailForm">
-      <label for="emailTheme">メールのテーマ:</label>
-      <input type="text" id="emailTheme" name="emailTheme" required><br><br>
-      <label for="emailContent">メール内容:</label><br>
-      <textarea id="emailContent" name="emailContent" rows="10" cols="50" required></textarea><br><br>
-      <button type="submit">メールを送信</button>
-    </form>
-    <div id="result"></div>
-  </div>
+    <div class="max-w-xl mx-auto mt-10">
+        <h1 class="text-2xl font-bold mb-4">テーマ選択</h1>
+        <select id="themeSelect" class="block w-full p-2 border rounded">
+            <option value="">テーマを選択してください</option>
+            <option value="business-meeting">ビジネス会議</option>
+            <option value="client-negotiation">顧客との交渉</option>
+            <option value="email-writing">メール作成</option>
+            <!-- 他のテーマを追加 -->
+        </select>
+        <button id="proceedButton" class="mt-4 p-2 bg-blue-500 text-white rounded w-full">メール作成へ進む</button>
+    </div>
 
-  <script src="script.js"></script>
+    <script>
+        document.getElementById('proceedButton').addEventListener('click', function() {
+            const theme = document.getElementById('themeSelect').value;
+            if (theme) {
+                localStorage.setItem('selectedTheme', theme);
+                window.location.href = 'mail_creation.html'; // メール作成画面へ遷移
+            } else {
+                alert('テーマを選択してください。');
+            }
+        });
+    </script>
 </body>
 </html>
